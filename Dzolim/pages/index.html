@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memahami Perbuatan Dzolim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #8b0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #8b0000;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        footer {
+            background-color: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .quote {
+            background-color: #fff3cd;
+            border-left: 5px solid #ff9800;
+            padding: 10px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Memahami Perbuatan Dzolim</h1>
+        <p>Belajar menghindari ketidakadilan dalam kehidupan sehari-hari</p>
+    </header>
+
+    <main>
+        <h2>Apa itu Dzolim?</h2>
+        <p>
+            Dzolim adalah perbuatan yang tidak adil, melanggar hak orang lain, atau menempatkan sesuatu bukan pada tempatnya.
+            Dalam ajaran Islam, dzolim termasuk dosa besar yang harus dihindari.
+        </p>
+
+        <div class="quote">
+            "Sesungguhnya kezaliman itu adalah kegelapan pada hari kiamat." (HR. Bukhari dan Muslim)
+        </div>
+
+        <h2>Contoh Perbuatan Dzolim</h2>
+        <ul>
+            <li>Mengambil hak orang lain secara paksa.</li>
+            <li>Menyakiti hati orang dengan perkataan kasar.</li>
+            <li>Menipu dalam jual beli.</li>
+            <li>Meremehkan atau merugikan orang lain tanpa alasan yang benar.</li>
+        </ul>
+
+        <h2>Cara Menghindari Perbuatan Dzolim</h2>
+        <ul>
+            <li>Menjaga ucapan dan perbuatan agar tidak menyakiti orang lain.</li>
+            <li>Memenuhi janji dan kewajiban.</li>
+            <li>Bersikap adil dalam mengambil keputusan.</li>
+            <li>Meminta maaf jika melakukan kesalahan.</li>
+        </ul>
+
+        <h2>Video Edukasi Dzolim</h2>
+        <div class="video-container">
+            <video id="videoDzolim" width="560" height="315" loop playsinline controls>
+                <source src="Dzolim.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Edukasi Islami | Menghindari Dzolim, Menebar Kebaikan
+    </footer>
+
+    <script>
+        const video = document.getElementById('videoDzolim');
+
+        // Coba autoplay saat halaman dimuat
+        window.addEventListener('load', () => {
+            let playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    // Jika gagal autoplay, tunggu klik pengguna
+                    document.body.addEventListener('click', () => {
+                        video.play();
+                    }, { once: true });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
